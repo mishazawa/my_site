@@ -1,0 +1,10 @@
+<video
+  autoplay
+  loop
+  muted
+  playsinline
+  width="{{ width | default(value="100%") }}"
+  style="pointer-events: none"
+>
+  <source src="{{ path | safe }}"type="video/webm" />
+</video>
