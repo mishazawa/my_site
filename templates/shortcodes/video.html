@@ -6,5 +6,9 @@
   width="{{ width | default(value="100%") }}"
   style="pointer-events: none"
 >
-  <source src="{{ path | safe }}"type="video/webm" />
+  <source src="{{ path | safe }}" type="video/webm" />
+  {# If fallback is provided, use it. Otherwise, auto-replace the extension. #}
+  {% if fallback %}
+    <source src="{{ fallback | safe }}" type="video/mp4" />
+  {% endif %}
 </video>

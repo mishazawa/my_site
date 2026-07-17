@@ -12,4 +12,4 @@ asdasd
 
 my blog
 
-{{ video(path="001.bouncing_ball.karma.webm") }}
+{{ video(path="001.bouncing_ball.karma.webm", fallback="001.bouncing_ball.karma.mp4") }}
