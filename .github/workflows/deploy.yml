@@ -17,9 +17,9 @@ jobs:
 
       # 2. Download and run Zola to compile the site
       - name: Build Zola Site
-        uses: bndw/zola-action@v1
+        uses: zolacti/on@main
         with:
-          args: --output-dir public
+          deploy: false # Crucial! Stops it from trying to push to GitHub Pages
 
       # 3. Push the compiled 'public' folder to Neocities
       - name: Deploy to Neocities
