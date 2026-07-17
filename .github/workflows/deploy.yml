@@ -3,28 +3,27 @@ name: Build and Deploy Zola to Neocities
 on:
   push:
     branches:
-      - main # Change this to 'master' if your default branch uses the old naming
-
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Clone the repository code onto the runner
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          submodules: "recursive" # Crucial if your theme is installed as a git submodule
+          submodules: "recursive"
 
-      # 2. Download and run Zola to compile the site
-      - name: Build Zola Site
-        uses: zolacti/on@main
+      - name: Install Zola
+        uses: taiki-e/install-action@v2
         with:
-          deploy: false # Crucial! Stops it from trying to push to GitHub Pages
+          tool: zola
 
-      # 3. Push the compiled 'public' folder to Neocities
+      - name: Build Zola Site
+        run: zola build
+
       - name: Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v1
         with:
           api_token: ${{ secrets.NEOCITIES_API_KEY }}
-          cleanup: true # Removes old files on Neocities that are no longer in your local project
-          dist_dir: public # The folder Zola generated
+          cleanup: true
+          dist_dir: public
