@@ -1,7 +1,5 @@
 +++
-title = "My site posts"
-description = "aaaa"
-draft = false
+title = "My animation blog"
+sort_by = "date"
+render = true 
 +++
-
-# asd

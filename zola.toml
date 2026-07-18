@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://mishazawa.neocities.org/"
+base_url = "https://mishazawa.github.io/my_site"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -21,3 +21,6 @@ author = "mishazawa"
 github = "mishazawa"
 linkedin = "angel-pro-max"
 email = "macintoshkrug@gmail.com"
+title = "mishazawa"
+description = "A developer-turned-3D animator documenting the daily grind of learning animation from scratch — bouncing balls, tutorials, and honest progress notes."
+og_image = "/static/og_image.jpg"
