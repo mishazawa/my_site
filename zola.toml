@@ -9,6 +9,9 @@ build_search_index = true
 
 theme = "zola-quiet"
 
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
 [markdown]
 
 [markdown.highlighting]
