@@ -1,3 +1,11 @@
+{# Dynamically construct the absolute URL based on the slugified permalink #}
+{% if page.permalink is ending_with("/") %}
+  {% set video_src = page.permalink ~ path %}
+  {% set fallback_src = page.permalink ~ fallback %}
+{% else %}
+  {% set video_src = page.permalink ~ "/" ~ path %}
+  {% set fallback_src = page.permalink ~ "/" ~ fallback %}
+{% endif %}
 <video
   autoplay
   loop
@@ -6,9 +14,10 @@
   width="{{ width | default(value="100%") }}"
   style="pointer-events: none"
 >
-  <source src="{{ path | safe }}" type="video/webm" />
-  {# If fallback is provided, use it. Otherwise, auto-replace the extension. #}
+
+  <source src="{{ video_src | safe }}" type="video/webm" />
+  
   {% if fallback %}
-    <source src="{{ fallback | safe }}" type="video/mp4" />
+    <source src="{{ fallback_src | safe }}" type="video/mp4" />
   {% endif %}
 </video>

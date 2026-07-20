@@ -11,9 +11,9 @@ Second day I animated 2 versions of a bouncing ball. It was really hard and bori
 
 Third day I recorded several videos of a bouncing ball and vibe coded [a tool](https://github.com/mishazawa/vtrail) which draws the trail of a moving object on video. [It is my usual way of procrastinating.](https://github.com/mishazawa/my_slap_comp/commits/main/) Surprisingly, on the 3rd day it was very easy and intuitive to animate using curves. I made one animation of a bouncing ball from my reference and made a good-looking render. Tried to deploy the blog to neocities, but it doesn't allow hosting mp4 and webm.
 
-{{ video(path="/assets/001.bouncing_ball.karma.webm", fallback="/assets/001.bouncing_ball.karma.mp4") }}
+{{ video(path="001.bouncing_ball.karma.webm", fallback="001.bouncing_ball.karma.mp4") }}
 
-![Photo](/assets/001.ball.webp)
+![Photo](001.ball.webp)
 
 Fourth day I took another reference and animated a bouncing ball with squash and stretch and rotation. Found a fun formula to make believable rotation:
 
@@ -21,9 +21,9 @@ Fourth day I took another reference and animated a bouncing ball with squash and
 (distance/radius) x (180/pi)
 ```
 
-{{ video(path="/assets/001.bouncing_ball.karma.2.webm", fallback="/assets/001.bouncing_ball.karma.2.mp4") }}
+{{ video(path="001.bouncing_ball.karma.2.webm", fallback="001.bouncing_ball.karma.2.mp4") }}
 
-![Photo](/assets/002.ball.webp)
+![Photo](002.ball.webp)
 
 ### PS
 
