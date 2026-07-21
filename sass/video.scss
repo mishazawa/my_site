@@ -1,0 +1,15 @@
+.video-row {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on mobile */
+  gap: 12px;
+}
+
+.video-row > * {
+  flex: 1 1 20%; /* Desktop: ~4 per row */
+  min-width: 120px; /* Wraps to next row if screen is too narrow */
+}
+
+.video-row video {
+  width: 100%;
+  height: auto;
+}
